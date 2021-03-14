@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Movie Ticket Booking</title>
+
+
+  <link rel="stylesheet" href="css/main.css" />
+
+  <link rel="icon" type="image/png" href="img/movie-film-2-120-317376.png">
+</head>
+
+<body>
+  <div class="content">
+    <label class="title" for="">Welcome To Movie Ticket Booking</label>
+    <select name="" id="film">
+      <option value="12">Life in a Nutshel <span class="price"> $ 12.00</span></option>
+      <option value="11">Ma <span class="price"> $ 12.00</span></option>
+      <option value="13">After The Rain <span class="price"> $ 12.00</span></option>
+      <option value="14">Life of Pie <span class="price"> $ 12.00</span></option>
+      <option value="16">Baba <span class="price"> $ 12.00</span></option>
+      <option value="22">Free Life <span class="price"> $ 12.00</span></option>
+      <option value="33">Safe Haven <span class="price"> $ 12.00</span></option>
+      <option value="10">Independcy <span class="price"> $ 12.00</span></option>
+      <option value="12">Best of me <span class="price"> $ 12.00</span></option>
+      <option value="9">Money Heist <span class="price"> $ 12.00</span></option>
+      <option value="18">Prison Break <span class="price"> $ 12.00</span></option>
+      <option value="12">Notebook <span class="price"> $ 12.00</span></option>
+      <option value="13">Burden <span class="price"> $ 13.00</span></option>
+      <option value="16">The Trauma <span class="price"> $ 16.00</span></option>
+      <option value="17">Queen of South <span class="price"> $ 17.00</span></option>
+      <option value="19">Transformer <span class="price"> $ 19.00</span></option>
+      <option value="12">Coincident <span class="price"> $ 12.00</span></option>
+      <option value="20">kimson <span class="price"> $ 12.00</span></option>
+    </select>
+  </div>
+
+
+  <div class="cinemaInfo">
+    <div class="seat info"></div>
+    <small>Free</small>
+
+
+    <div class="seat Selection"></div>
+    <small>Selezionato</small>
+
+
+    <div class="seat Occupant"></div>
+    <small>Occupant</small>
+  </div>
+
+  <div class="theatre">
+    <div class="screenArea"><span> Movie Time</span></div>
+    <div class="theatreRows">
+      <div class="row" id="1">
+        <div class="FirstSeat" id="1"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="2">
+        <div class="SeatClass" id="2"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="3">
+        <div class="rowNumb" id="3"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="4">
+        <div class="rowNumb" id="4"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="5">
+        <div class="rowNumb" id="5"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout">
+    <div class="checkOutAreaOne">
+      <span> movie:</span>
+      <div class="Movie"></div>
+      <br>
+      <div class="checkoutTotal">
+        <span> seat : </span> <span class="seat total"> 0 </span>
+        <span> Total $ : </span> <span class="Total"> 0 </span>
+      </div>
+
+      <br>
+    </div>
+
+    <div class="checkOutAreaTwo">
+      <!-- BACKEND ROUTE -->
+      <form action="https://YOURSITE.COM/CREDITCARDCHECKOUT" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_YOURSTRIPEKEY"
+          data-amount="0" data-name="test" data-description="Sito Web Veloce"
+          data-image="img/movie-film-2-120-317376.png" data-locale="auto" data-currency="dollar">
+        </script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+
+
+        <button type="submit" class="btnsubmit">submit</button>
+
+      </form>
+
+
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
